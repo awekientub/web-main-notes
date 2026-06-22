@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加拿大预测 · 知识库入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f7f9fc;
+            color: #1e2a37;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 4rem;
+            width: 100%;
+        }
+        /* 隐形分隔感，极简标题层级 */
+        .site-label {
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #7a8b9b;
+            margin-bottom: 0.25rem;
+            font-weight: 500;
+        }
+        h1 {
+            font-weight: 500;
+            font-size: 2rem;
+            letter-spacing: -0.02em;
+            color: #0b1b28;
+            margin-bottom: 1.2rem;
+            line-height: 1.2;
+            border-left: 3px solid #3b6e9e;
+            padding-left: 1rem;
+        }
+        h2 {
+            font-weight: 500;
+            font-size: 1.35rem;
+            color: #1f2f3d;
+            margin: 2.2rem 0 0.8rem;
+            letter-spacing: -0.01em;
+        }
+        h3 {
+            font-weight: 500;
+            font-size: 1.05rem;
+            color: #2c3f4f;
+            margin: 1.4rem 0 0.4rem;
+        }
+        p, li {
+            color: #2a3b4a;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+        a {
+            color: #1f5880;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border 0.15s ease;
+        }
+        a:hover {
+            border-bottom-color: #1f5880;
+        }
+        .direct-link {
+            font-weight: 500;
+            background: #ecf2f8;
+            padding: 0.05rem 0.2rem;
+            border-radius: 2px;
+        }
+        /* 卡片网格 — 目录感布局 */
+        .topic-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.8rem 0 1.5rem;
+        }
+        .topic-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 1rem 1.2rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            border: 1px solid #e7ecf2;
+            transition: box-shadow 0.2s;
+        }
+        .topic-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .topic-card .card-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #6d7e8e;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            margin-bottom: 0.2rem;
+        }
+        .topic-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+        /* 提示区 */
+        .note-box {
+            background: #f0f5fa;
+            border-left: 4px solid #3b6e9e;
+            padding: 1rem 1.3rem;
+            margin: 1.8rem 0 1.2rem;
+            border-radius: 0 6px 6px 0;
+        }
+        .note-box p {
+            margin-bottom: 0.2rem;
+            font-size: 0.95rem;
+        }
+        /* FAQ摘要（极简） */
+        .faq-item {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #eef3f8;
+        }
+        .faq-item:last-of-type {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 500;
+            color: #183144;
+        }
+        .faq-a {
+            color: #3f5567;
+            font-size: 0.95rem;
+            margin-top: 0.2rem;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #dbe2ea, transparent);
+            margin: 2.2rem 0;
+        }
+        .meta-footer {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: #6f8294;
+            border-top: 1px solid #e4eaf1;
+            padding-top: 1.2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.5rem;
+        }
+        @media (max-width: 580px) {
+            .container {
+                padding: 1.8rem 1rem 3rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+                padding-left: 0.8rem;
+            }
+            .topic-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            .topic-card {
+                padding: 0.9rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="site-label">KNOWLEDGE BASE · 知识入口</div>
+    <h1>加拿大预测 · 快速识别与信息索引</h1>
+
+    <p>对于初次接触 <strong>加拿大预测</strong> 领域的用户，最迫切的需求往往是理解「这个网站提供什么、如何快速定位所需信息」。本页以知识库入口的方式，将核心功能、数据特点、使用提示与常见问题组织为清晰的目录结构，帮助您在一分钟内建立全局认知。</p>
+
+    <!-- 目录感卡片网格：四个主题 -->
+    <div class="topic-grid">
+        <div class="topic-card">
+            <div class="card-label">功能定位</div>
+            <p>面向关注加拿大各类趋势、周期与概率分析的用户，提供结构化预测参考与信息聚合。</p>
+        </div>
+        <div class="topic-card">
+            <div class="card-label">数据特点</div>
+            <p>基于公开统计与模型推算，内容侧重趋势解读，不构成确定性结论或投资建议。</p>
+        </div>
+        <div class="topic-card">
+            <div class="card-label">适用场景</div>
+            <p>研究参考、个人兴趣、策略对照、信息比对。适合理性决策前的辅助信息浏览。</p>
+        </div>
+        <div class="topic-card">
+            <div class="card-label">内容形态</div>
+            <p>周期性报告、指标追踪、区间分析、专题综述。所有内容均保留客观表述。</p>
+        </div>
+    </div>
+
+    <!-- 说明区：半结构化介绍 -->
+    <h2>如何理解“预测”指向</h2>
+    <p><a href="https://home-caforecast.com" class="direct-link">加拿大预测</a> 这一概念在此处特指基于历史数据、周期规律与公开信息整合而成的推演内容。网站不提供任何形式的保证或承诺，所有材料仅供具备独立判断能力的用户参考。使用者应结合自身情况审慎采纳。</p>
+    <p>为了方便快速定位，主页按 <strong>数据源类型</strong>、<strong>周期维度</strong>、<strong>置信区间</strong> 等维度划分板块。每个板块均附有简要说明与引用标注，降低信息筛选成本。</p>
+
+    <!-- 提示区 -->
+    <div class="note-box">
+        <p><strong>使用提示</strong> · 预测内容具有时效性与概率特征，过往表现不代表未来结果。建议定期查阅最新更新，并交叉验证多种信息渠道。如发现数据异常或页面错误，可通过站内反馈渠道告知。</p>
+    </div>
+
+    <!-- 相关信息区 + FAQ 摘要 -->
+    <h2>相关信息与常见问题摘要</h2>
+
+    <div class="faq-item">
+        <div class="faq-q">站内预测覆盖哪些加拿大领域？</div>
+        <div class="faq-a">主要涉及经济指标、人口趋势、气候模式、市场周期等可量化方向，以图表与简评形式呈现。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">数据更新频率如何？</div>
+        <div class="faq-a">大部分指标按月或季度更新，专题类内容随事件驱动不定期发布。首页会标注最近更新日期。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">是否需要注册才能浏览？</div>
+        <div class="faq-a">不需要。所有公开内容均可直接阅读。部分深度报告或历史归档可能需简单验证（非强制注册）。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">如何引用站内内容？</div>
+        <div class="faq-a">引用时请注明来源为 <a href="https://home-caforecast.com">加拿大预测</a>，并标注具体发布页面与日期。商业用途前建议联系确认授权范围。</div>
+    </div>
+
+    <hr>
+
+    <!-- 再次嵌入链接（自然句） -->
+    <p style="font-size:0.95rem; color:#38556b;">想要直接浏览完整内容，可前往 <a href="https://home-caforecast.com" style="font-weight:500;">加拿大预测</a> 查看最新板块与数据汇总。本入口页仅作为导航与概念说明，帮助新用户降低认知门槛。</p>
+
+    <!-- 脚注 / 元信息 -->
+    <div class="meta-footer">
+        <span>© 2025 · 知识库入口</span>
+        <span>版本记录：v1.2 · 目录结构</span>
+        <span>最后更新：2025-02</span>
+    </div>
+</div>
+</body>
+</html>
